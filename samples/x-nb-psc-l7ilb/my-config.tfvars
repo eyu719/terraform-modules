@@ -18,7 +18,7 @@ ax_region = "us-west1"
 
 project_id = "<gcp_project_id>"
 
-project_parent = "folders/<folder_id>" # Or "organizations<organization_id>".
+#project_parent = "folders/<folder_id>" # Or "organizations<organization_id>".
 
 project_create = false
 
@@ -28,7 +28,7 @@ apigee_instances_metadata = {
   usw1-instance = {
     apigee_instances = {
       region       = "us-west1"
-      ip_range     = "10.0.0.0/22,10.1.0.0/28"
+      ip_range     = "10.103.0.0/22,10.104.0.0/28"
       environments = ["test1", "test2"]
     }
     l7_ilb_proxy_subnet_name       = "l7ilb-proxy-sbnt-usw1"
@@ -48,7 +48,7 @@ apigee_instances_metadata = {
   usc1-instance = {
     apigee_instances = {
       region       = "us-central1"
-      ip_range     = "10.0.8.0/22,10.1.0.32/28"
+      ip_range     = "10.103.8.0/22,10.104.0.32/28"
       environments = ["test1", "test2"]
     }
     l7_ilb_proxy_subnet_name       = "l7ilb-proxy-sbnt-usc1"
@@ -89,13 +89,13 @@ psc_ingress_network = "psc-ingress"
 psc_ingress_subnets = [
   {
     name               = "apigee-psc-usw1"
-    ip_cidr_range      = "10.100.0.0/24"
+    ip_cidr_range      = "10.101.0.0/24"
     region             = "us-west1"
     secondary_ip_range = null
   },
 #  {
 #    name               = "apigee-psc-use4"
-#    ip_cidr_range      = "10.101.0.0/24"
+#    ip_cidr_range      = "10.XX.0.0/24"
 #    region             = "us-east4"
 #    secondary_ip_range = null
 #  },
@@ -107,5 +107,5 @@ psc_ingress_subnets = [
   }
 ]
 
-peering_range = "10.0.0.0/20"
-support_range = "10.1.0.0/26"
+peering_range = "10.103.0.0/20"
+support_range = "10.104.0.0/26"
